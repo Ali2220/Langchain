@@ -1,0 +1,8 @@
+1. LangChain Ke 6 Core Concepts:
+
+Models -->	AI ka dimaag (Gemini, GPT)	Jaise insaan ka brain
+Prompts -->	AI ko jo bolte ho	"Mujhe yeh translation karo"
+Chains -->	Multiple steps ko connect karna	Pehle translate, phir summarize
+Memory -->	Past conversations yaad rakhna	Chatbot ko pehle ki baat yaad
+Agents -->	AI ko actions karne dena	Google search, calculator use
+Retrievers -->	Documents se relevant info dhunda	PDF se answer nikalna
