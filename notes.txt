@@ -6,3 +6,27 @@ Chains -->	Multiple steps ko connect karna	Pehle translate, phir summarize
 Memory -->	Past conversations yaad rakhna	Chatbot ko pehle ki baat yaad
 Agents -->	AI ko actions karne dena	Google search, calculator use
 Retrievers -->	Documents se relevant info dhunda	PDF se answer nikalna
+
+2. pipe() = ek component ka output → dusre component ka input bana dena
+
+Example: prompt.pipe(model)
+
+
+3. invoke() = kisi component (prompt / model / chain) ko input dena aur uska output lena
+
+Example: chain.invoke()
+
+
+4. Output Parser = Model ka response raw text hota hai. Output parser ausse structured format mein convert karta hai (JSON, array, etc.).
+
+
+5. Chain = Chain ek sequence hai jo multiple LangChain components(prompt / model / outputparser) ko ek pipeline mein connect karti hai. Jaise assembly line mein ek ke baad ek kaam hota hai.
+
+6. Types of Chains:
+
+Single Chain --> Ek component
+Sequential Chain --> Multiple steps linear
+Router Chain --> Conditional routing
+
+LangChain mein pipe() operator se chains banate hain. Ye functional programming style hai.
+

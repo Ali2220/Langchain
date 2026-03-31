@@ -9,8 +9,8 @@ const model = new ChatGoogle({
   model: "gemini-3-flash-preview",
 });
 
-// // chain create ki.
-// // prompt ka output --> model ka input ban rha hai.
+// chain create ki.
+// prompt ka output --> model ka input ban rha hai.
 const chain = prompt.pipe(model);
 
 const response = await chain.invoke({ question: "What is the capital of USA" });
