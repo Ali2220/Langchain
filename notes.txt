@@ -30,3 +30,25 @@ Router Chain --> Conditional routing
 
 LangChain mein pipe() operator se chains banate hain. Ye functional programming style hai.
 
+
+7. Memory = Memory woh component hai jo previous conversations store karta hai taake AI context samajh sake.
+
+
+8. Types of Memory
+
+--> Buffer Memory =	Sab kuch store karta hai	Short conversations
+--> Buffer Window Memory =	Recent messages only	Token limit ke liye
+--> Summary Memory =	Summary store karta hai	Long conversations
+--> Vector Memory =	Semantic search se relevant yaad	Very long conversations
+
+9. PromptTemplate vs ChatPromptTemplate 
+
+👉 PromptTemplate = simple text prompts ke liye
+👉 ChatPromptTemplate = chat-based models ke liye (roles ke sath)
+
+
+10. InMemoryChatMessageHistory = Ye ek storage (memory container) hai jahan chat history store hoti hai.
+
+11. RunnableWithMessageHistory = Ye ek wrapper hai jo tumhari chain + memory ko connect karta hai.
+
+Ye ensure karta hai ke har request ke sath history bhi jaye
