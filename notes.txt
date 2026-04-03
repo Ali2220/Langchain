@@ -52,3 +52,7 @@ LangChain mein pipe() operator se chains banate hain. Ye functional programming 
 11. RunnableWithMessageHistory = Ye ek wrapper hai jo tumhari chain + memory ko connect karta hai.
 
 Ye ensure karta hai ke har request ke sath history bhi jaye
+
+12. Document Loaders = PDF, Text file, Webpage se data kaise read karein
+
+13. Text Splitter = Text splitter document ko chhote logical pieces mein todta hai.
