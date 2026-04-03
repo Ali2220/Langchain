@@ -1,5 +1,5 @@
 import fs from "fs/promises";
-import pdfParse from "pdf-parse/lib/pdf-parse.js"; // 👈 correct import
+import pdfParse from "pdf-parse/lib/pdf-parse.js";
 import { Document } from "@langchain/core/documents";
 
 async function loadPdf(filePath){
