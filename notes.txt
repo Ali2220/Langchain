@@ -56,3 +56,7 @@ Ye ensure karta hai ke har request ke sath history bhi jaye
 12. Document Loaders = PDF, Text file, Webpage se data kaise read karein
 
 13. Text Splitter = Text splitter document ko chhote logical pieces mein todta hai.
+
+14. 🔢 Embeddings: Text ko numbers mein kaise convert karein (taake computer samajh sake)
+    💾 Vector Stores: Un numbers ko database mein kaise store karein
+    🔍 Similarity Search: Similar text kaise dhundein
