@@ -60,3 +60,7 @@ Ye ensure karta hai ke har request ke sath history bhi jaye
 14. 🔢 Embeddings: Text ko numbers mein kaise convert karein (taake computer samajh sake)
     💾 Vector Stores: Un numbers ko database mein kaise store karein
     🔍 Similarity Search: Similar text kaise dhundein
+
+15. 🔍 Retrieval: Vector store se relevant documents kaise dhundein
+    📊 Ranking: Sab se relevant pehle kaise laayein
+    🎯 RAG Pipeline: Search + Answer ka complete flow
