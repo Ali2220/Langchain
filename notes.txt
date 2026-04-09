@@ -64,3 +64,12 @@ Ye ensure karta hai ke har request ke sath history bhi jaye
 15. 🔍 Retrieval: Vector store se relevant documents kaise dhundein
     📊 Ranking: Sab se relevant pehle kaise laayein
     🎯 RAG Pipeline: Search + Answer ka complete flow
+
+16. Agent = Agent ek AI (LLM) hai jo decide kar sakta hai ke konsa tool use karna hai. Jaise agar aap poocho "Pakistan ka current PM kaun hai?" to agent Google search tool use karega.
+
+17. Tool = Tool ek function hai jo agent use kar sakta hai. Jaise:
+
+    Calculator tool: Mathematical calculations  
+    Search tool: Internet se information
+    Database tool: Apne data se answer
+

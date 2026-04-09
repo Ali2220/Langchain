@@ -4,9 +4,7 @@ dotenv.config();
 import { GoogleGenAI } from "@google/genai";
 import { ChromaClient } from "chromadb";
 
-// --------------------
 // 1. Init
-// --------------------
 const ai = new GoogleGenAI({
   apiKey: process.env.GOOGLE_API_KEY,
 });
@@ -18,9 +16,7 @@ const chroma = new ChromaClient({
 
 let collection;
 
-// --------------------
 // 2. Embedding
-// --------------------
 async function getEmbedding(text) {
   const response = await ai.models.embedContent({
     model: "gemini-embedding-001",
@@ -30,9 +26,7 @@ async function getEmbedding(text) {
   return response.embeddings[0].values;
 }
 
-// --------------------
 // 3. Setup DB (RESET)
-// --------------------
 async function setupDB() {
   try {
     await chroma.deleteCollection({ name: "my_knowledge" });
@@ -42,27 +36,23 @@ async function setupDB() {
 
   collection = await chroma.createCollection({
     name: "my_knowledge",
-    embeddingFunction: null, // IMPORTANT
+    embeddingFunction: null, // we are using gemini embedding model, so we dont have to use chroma embdedding function.
   });
 }
 
-// --------------------
 // 4. Insert Data
-// --------------------
 async function addData(id, text, metadata = {}) {
   const embedding = await getEmbedding(text);
 
   await collection.add({
-    ids: [id], // MUST be string
+    ids: [id],
     embeddings: [embedding],
     documents: [text],
     metadatas: [metadata],
   });
 }
 
-// --------------------
 // 5. Retrieve
-// --------------------
 async function retrieve(query, topK = 3) {
   const queryEmbedding = await getEmbedding(query);
 
@@ -84,9 +74,7 @@ async function retrieve(query, topK = 3) {
   return retrieved;
 }
 
-// --------------------
 // 6. RAG Answer
-// --------------------
 async function answerWithRetrieval(question) {
   const relevant = await retrieve(question, 3);
 
@@ -127,9 +115,7 @@ Answer:
   return answer;
 }
 
-// --------------------
 // 7. Main Flow
-// --------------------
 async function main() {
   await setupDB();
 
