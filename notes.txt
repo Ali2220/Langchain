@@ -77,3 +77,6 @@ Ye ensure karta hai ke har request ke sath history bhi jaye
     🧠 Memory Integration: Previous messages store karna
     🔄 Multi-turn Conversation: Baar baar sawaal jawab karna
     🎯 Context Understanding: "Uske baare mein batao" jaise questions samajhna
+
+19. 🛠️ Custom Tools: Apne khud ke functions AI ko dena
+
